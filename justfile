@@ -44,12 +44,24 @@ spl-tok-create:
 
 # Создаём аккаунт-держатель токенов
 spl-tok-acc-create:
-    spl-token create-account -p <program-id> <token> 
+    spl-token create-account -p <program-id> <token-mint-account> 
+
+# Сжигаем часть токенов
+spl-tok-burn:
+    spl-token burn <token-account> 15
 
 # Минтим токены на новом адресе
 spl-tok-mint:
-    spl-token mint <token> 678
+    spl-token mint <token-mint-account> 678
 
 # Отправляем несколько токенов тому же другу
 spl-tok-trans:
-    spl-token transfer <token> 400 H3S7NRkCqQtHbZztPY6FXKm264RSV1Vb6JWdPRaPa37s
+    spl-token transfer <token-mint-account> 400 H3S7NRkCqQtHbZztPY6FXKm264RSV1Vb6JWdPRaPa37s
+
+# Проверяем общий объём выпуска токена
+spl-check-tok:
+    spl-token supply <token-mint-account>
+
+# Проверяем, какие токены выпущены данным аккаунтом, и сколько их у него
+spl-acc-tok:
+    spl-token address; spl-token accounts
