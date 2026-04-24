@@ -1,0 +1,12 @@
+[package]
+name = "get-transaction-info"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+solana-client = "3"
+solana-commitment-config = "3"
+solana-sdk = "4"
+solana-transaction-status-client-types = "3"
+tokio = { version = "1", features = ["full"] }
