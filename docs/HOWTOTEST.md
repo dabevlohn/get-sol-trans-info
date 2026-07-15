@@ -29,7 +29,7 @@ cd vault-escrow
 
 ## Пример Rust-теста
 
-Ниже — **полностью Rust-версия** теста для escrow. Она ориентирована на обычный Anchor Rust client, который и рекомендуется для `--test-template rust`.
+Ниже — **Rust-версия** теста для escrow. Она ориентирована на обычный Anchor Rust client, который и рекомендуется для `--test-template rust`.
 
 ```rust
 use anchor_lang::prelude::*;
